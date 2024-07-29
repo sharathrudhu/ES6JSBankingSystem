@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ES6 Js Banking System</title>
+    <title>Banking System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    This is a banking system
+    <div class="container">
+        <h1>Banking System</h1>
+        <div class="form-group">
+            <label for="customerId">Customer ID:</label>
+            <input type="text" id="customerId">
+        </div>
+        <div class="form-group">
+            <label for="accountNumber">Account Number:</label>
+            <input type="text" id="accountNumber">
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount">
+        </div>
+        <button onclick="createCustomer()">Create Customer</button>
+        <button onclick="createAccount()">Create Account</button>
+        <button onclick="deposit()">Deposit</button>
+        <button onclick="withdraw()">Withdraw</button>
+        <button onclick="transferFunds()">Transfer Funds</button>
+        <div id="output"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
