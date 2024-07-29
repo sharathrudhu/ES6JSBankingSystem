@@ -1,62 +1,83 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 /* style.css */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
 }
 
 .container {
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between the modules */
+    max-width: 1500px;
     padding: 20px;
-    border-radius: 5px;
+    background-color: #fff;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.moduleCreateAccount, .moduleDepositWithdraw, .moduleTransfer {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0;
 }
 
 .form-group {
     margin-bottom: 15px;
 }
 
-label {
+.form-group label {
     display: block;
     margin-bottom: 5px;
 }
 
-input {
+.form-group input {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
 }
 
 button {
-    display: inline-block;
-    margin-right: 10px;
     padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
+    margin-right: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
+.moduleDepositWithdraw button{
+    margin-bottom: 10px;
+}
+
 #output {
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
 }
