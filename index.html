@@ -1,45 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ES6 Banking System</title>
+    <title>Banking System</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Banking System</h1>
-        <div class="form-group">
-            <label for="customerId">Customer ID:</label>
-            <input type="text" id="customerId">
+    <h1>Banking System</h1>
+    
+    <div class="container">      
+
+        <div class="moduleCreateAccount">
+            <h2>Create Account</h2>
+            <div class="form-group">
+                <label for="name">Customer Name:</label>
+                <input type="text" class="name">
+            </div>
+            <div class="form-group">
+                <label for="customerId">Customer ID:</label>
+                <input type="text" class="customerId">
+            </div>
+            <div class="form-group">
+                <label for="accountNumber">Account Number:</label>
+                <input type="text" class="accountNumber">
+            </div>
+            <div class="form-group">
+                <label for="amount">Initial Deposit Amount:</label>
+                <input type="number" class="amount">
+            </div>
+            <button onclick="createCustomerAccount()">Create Customer Account</button>
         </div>
-        <div class="form-group">
-            <label for="name">Customer Name:</label>
-            <input type="text" id="name">
+
+        <div class="moduleDepositWithdraw">
+            <h2>Deposit and Withdraw</h2>
+            <div class="form-group">
+                <label for="customerId">Customer ID:</label>
+                <input type="text" class="customerId">
+            </div>
+            <div class="form-group">
+                <label for="accountNumber">Account Number:</label>
+                <input type="text" class="accountNumber">
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" class="amount">
+            </div>
+            <button onclick="depositAmount()">Deposit</button> <br>
+            <button onclick="withdrawAmount()">Withdraw</button> <br>
+            <button onclick="checkBalance()">Check Balance</button>
         </div>
-        <div class="form-group">
-            <label for="accountNumber">Account Number:</label>
-            <input type="text" id="accountNumber">
+
+        <div class="moduleTransfer">
+            <h2>Transfer Funds</h2>
+            <div class="form-group">
+                <label for="fromAccount">From Account Number:</label>
+                <input type="text" class="fromAccount">
+            </div>
+            <div class="form-group">
+                <label for="toAccount">To Account Number:</label>
+                <input type="text" class="toAccount">
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" class="amount">
+            </div>
+            <button onclick="transferFunds()">Transfer</button>
         </div>
-        <div class="form-group">
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount">
-        </div>
-        <div class="form-group">
-            <label for="fromAccount">From Account:</label>
-            <input type="text" id="fromAccount">
-        </div>
-        <div class="form-group">
-            <label for="toAccount">To Account:</label>
-            <input type="text" id="toAccount">
-        </div>
-        <button onclick="createCustomer()">Create Customer</button>
-        <button onclick="createAccount()">Create Account</button>
-        <button onclick="deposit()">Deposit</button>
-        <button onclick="withdraw()">Withdraw</button>
-        <button onclick="transferFunds()">Transfer Funds</button>
-        <div id="output"></div>
+
+        
     </div>
+
+    <div id="output"></div>
     <script src="script.js"></script>
 </body>
+
 </html>
