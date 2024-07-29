@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banking System</title>
+    <title>ES6 Banking System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,12 +14,24 @@
             <input type="text" id="customerId">
         </div>
         <div class="form-group">
+            <label for="name">Customer Name:</label>
+            <input type="text" id="name">
+        </div>
+        <div class="form-group">
             <label for="accountNumber">Account Number:</label>
             <input type="text" id="accountNumber">
         </div>
         <div class="form-group">
             <label for="amount">Amount:</label>
             <input type="number" id="amount">
+        </div>
+        <div class="form-group">
+            <label for="fromAccount">From Account:</label>
+            <input type="text" id="fromAccount">
+        </div>
+        <div class="form-group">
+            <label for="toAccount">To Account:</label>
+            <input type="text" id="toAccount">
         </div>
         <button onclick="createCustomer()">Create Customer</button>
         <button onclick="createAccount()">Create Account</button>
